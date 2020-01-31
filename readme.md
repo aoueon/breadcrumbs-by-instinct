@@ -1,12 +1,12 @@
 # Functions
 
-* `get_aniomalia_breadcrumbs()` - builds array
+* `get_aniomalia_breadcrumbs()` - outputs array
 * `aniomalia_breadcrumbs()` - outputs HTML
 
 
 ### Breadcrumb item data
 
-* `title` — page name (blog name if no page is set for front page)
+* `title` - page name (site name if no page is set for frontpage option)
 * `url` - full permalink to page
 * `type` - useful for customizing by type
 	* `home`
@@ -25,7 +25,7 @@
 <?php $breadcrumbs = get_aniomalia_breadcrumbs(); ?>
 
 <?php if ( ! is_front_page() ) : ?>
-<nav class="aniomalia-breadcrumbs">
+<nav class="breadcrumbs">
 	<ul>
 		<?php foreach ( $breadcrumbs as $item ) : ?>
 		<li> 
@@ -46,6 +46,6 @@
 
 ### License
 
-Use this plugin freely for personal or commercial projects. 
+This plugin is released under a GPL license. Read more [here](http://www.gnu.org/licenses/gpl-2.0.html])
 
-Plugin built by Raoul Simionas for Aniomalia.
+Plugin built by Raoul Simionas for [Aniomalia](https://aniomalia.com/).
