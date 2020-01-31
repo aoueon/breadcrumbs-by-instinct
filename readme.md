@@ -1,4 +1,8 @@
-# Functions
+# Breadcrumbs by Instinct
+
+Simple to build custom HTML for breadcrumbs just as you want them without worrying about the functionality of the breadcrumbs themselves. Or if you prefer, use our simple formatted breadcrumbs. Simple is often better. More stuff coming to [Aniomalia](https://aniomalia.com/).
+
+### Functions
 
 * `get_aniomalia_breadcrumbs()` - outputs array
 * `aniomalia_breadcrumbs()` - outputs HTML
@@ -47,5 +51,3 @@
 ### License
 
 This plugin is released under a GPL license. Read more [here](http://www.gnu.org/licenses/gpl-2.0.html])
-
-Plugin built by Raoul Simionas for [Aniomalia](https://aniomalia.com/).
