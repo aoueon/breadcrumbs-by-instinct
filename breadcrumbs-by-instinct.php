@@ -1,11 +1,13 @@
 <?php 
 /**
  * Plugin Name: Breadcrumbs by instinct
- * Plugin URI: https://aniomalia.com/plugins/breadcrumbs-by-instinct/
+ * -Plugin URI: https://aniomalia.com/plugins/breadcrumbs-by-instinct/
  * Author: Aniomalia
  * Author URI: https://aniomalia.com/
  * Description: Format breadcrumbs the way you like them using the generate array, or use our recommended solution.
  * Version: 1.0
+ * License: GPLv2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  */
 
 /* Enqueue necessary assets */
@@ -15,7 +17,7 @@ function aniomalia_breadcrumbs_assets() {
 }
 add_action( 'wp_enqueue_scripts', 'aniomalia_breadcrumbs_assets' );
 
-// Output array of breadcrumbs
+/* Output array of breadcrumbs */
 function get_aniomalia_breadcrumbs() {
 
     global $post;
@@ -60,15 +62,15 @@ function get_aniomalia_breadcrumbs() {
                 $archive_title = single_tag_title( '', false );
                 $archive_url = get_term_link( get_queried_object() );
                 $archive_type = 'tag';
-            } elseif ( is_author() ) {
-                $archive_title = get_the_author();
-                $archive_url = get_author_posts_url( get_the_author_meta('ID') );
-                $archive_type = 'author';
             } elseif ( is_tax() ) {
                 $archive_title = sprintf( __( '%1$s' ), single_term_title( '', false ) );
                 $archive_url = get_term_link( get_queried_object() );
                 $archive_type = 'taxonomy';
             }
+            } elseif ( is_author() ) {
+                $archive_title = get_the_author();
+                $archive_url = get_author_posts_url( get_the_author_meta('ID') );
+                $archive_type = 'author';
             $breadcrumbs[] = array(
                 'title' => $archive_title,
                 'url' => $archive_url,
